@@ -2,9 +2,9 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-  - image: piomin/sample-spring-kotlin-microservice
-    jib:
-      args:
-        - -Pjib
+    - image: piomin/sample-spring-kotlin-microservice
+      jib:
+        args:
+          - -Pjib
   tagPolicy:
-    gitCommit: {}
+    gitCommit: { }

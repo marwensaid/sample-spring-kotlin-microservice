@@ -12,7 +12,7 @@ spec:
         app: sample-spring-kotlin-microservice
     spec:
       containers:
-      - name: sample-spring-kotlin-microservice
-        image: piomin/sample-spring-kotlin-microservice
-        ports:
-        - containerPort: 8080
+        - name: sample-spring-kotlin-microservice
+          image: piomin/sample-spring-kotlin-microservice
+          ports:
+            - containerPort: 8080

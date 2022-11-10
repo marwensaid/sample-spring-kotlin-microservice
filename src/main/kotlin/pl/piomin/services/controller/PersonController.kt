@@ -2,8 +2,8 @@ package pl.piomin.services.controller
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.springframework.web.bind.annotation.*
-import pl.piomin.services.model.Person
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
 import pl.piomin.services.repository.PersonRepository
 
 @RestController
@@ -12,28 +12,17 @@ class PersonController(val repository: PersonRepository) {
 
     val log: Logger = LoggerFactory.getLogger(PersonController::class.java)
 
-    @GetMapping("/{id}")
-    fun findById(@PathVariable id: Int): Person? {
-        log.info("findById({})", id)
-        return repository.findById(id)
-    }
 
-    @GetMapping("/ages/{age}")
-    fun findByAge(@PathVariable age: Int): List<Person> {
-        log.info("findByAge({})", age)
-        return repository.findByAge(age)
-    }
+    // TODO find by id
 
-    @GetMapping
-    fun findAll(): List<Person> = repository.findAll()
+    // TODO find by age
 
-    @PostMapping
-    fun add(@RequestBody person: Person): Person = repository.save(person)
+    // TODO find all
 
-    @PutMapping
-    fun update(@RequestBody person: Person): Person = repository.update(person)
+    // TODO method add person
 
-    @DeleteMapping("/{id}")
-    fun remove(@PathVariable id: Int): Boolean = repository.removeById(id)
+    // TODO method update person
+
+    // TODO methode delete person
 
 }

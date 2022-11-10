@@ -1,5 +1,3 @@
 package pl.piomin.services.model
 
-enum class Gender {
-    MALE, FEMALE
-}
+// TODO add a enum class for gender
